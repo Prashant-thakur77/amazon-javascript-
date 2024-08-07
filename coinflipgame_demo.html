@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COIN FLIP GAME</title>
+    
+
+  </head>
+  <body>
+    <p>COIN FLIP GAME</p>
+    <button onclick="
+    playGame('HEAD')">HEAD</button>
+    <button onclick="
+    playGame('TAIL')">TAIL</button>
+    <button onclick="
+    score.Wins=0;
+    score.Losses=0;
+    
+    
+    ">RESET GAME</button>
+    
+    <script>
+      let score ={
+        Wins: 0,
+        Losses:0
+
+      };
+
+      
+      function playGame(playerMove) {
+        const computerMove = pickCompMove();
+        let result=' ';
+        if(playerMove===computerMove){
+          result='WIN';
+        }
+        else{
+          result='LOSE';
+        }
+        if(result==='WIN'){
+          score.Wins+=1;
+
+        }
+        else if(result==='LOSE'){
+          score.Losses++;
+        }
+
+
+
+        //localStorage.setItem('score',JSON.stringify(score));
+
+
+        alert(`Player guessed ${playerMove}.
+The coin flips.
+${computerMove} is at the top.You ${result}.
+WINS: ${score.Wins}  LOSES:  ${score.Losses}.` );
+
+
+
+
+        
+      }
+
+
+      function pickCompMove(){
+        const HeadsOrTail = Math.random();
+        let computerMove=' ';
+        if(HeadsOrTail>=0 && HeadsOrTail<1/2){
+          computerMove= 'HEAD';
+        }
+        else if(HeadsOrTail>=1/2 && HeadsOrTail<1){
+          computerMove= 'TAIL';
+
+
+        }
+        return computerMove;  
+          
+        
+      }
+
+
+     
+     
+    </script>
+
+  </body>
+</html> 
