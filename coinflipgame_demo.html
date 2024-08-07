@@ -14,12 +14,14 @@
     <button onclick="
     score.Wins=0;
     score.Losses=0;
+    // dont know what is the use of this shit.removeItem('score');
+
     
     
     ">RESET GAME</button>
     
     <script>
-      let score ={
+      let score =JSON.parse(localStorage.getItem('score'))||{
         Wins: 0,
         Losses:0
 
@@ -45,7 +47,7 @@
 
 
 
-        //localStorage.setItem('score',JSON.stringify(score));
+        localStorage.setItem('score',JSON.stringify(score));
 
 
         alert(`Player guessed ${playerMove}.
