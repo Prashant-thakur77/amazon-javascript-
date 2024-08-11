@@ -6,7 +6,7 @@
 
   </head>
   <body>
-    <p>Cart Quantity</p>
+    <p></p>
     <button onclick="
     displayCartQuantity()
     
@@ -79,6 +79,7 @@
     
     <script>
       let cartQuantity = JSON.parse(localStorage.getItem('cart-quantity'))|| 0;
+      displayCartQuantity();
       function displayCartQuantity(){
         document.querySelector('.cart-quantity')
         .innerHTML=`Cart Quantity:${cartQuantity}`;
