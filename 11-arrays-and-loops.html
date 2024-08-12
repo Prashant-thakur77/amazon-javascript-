@@ -33,7 +33,7 @@
      for(let i=0;i<todolist.length;i++){
       const value = todolist[i];
       console.log(value);
-     }*/
+     }
     const nums=[1,1,3];
     let sum=0;
     for(let i=0;i<nums.length;i++){
@@ -45,8 +45,20 @@
       const numss=nums[i];
       numsdouble.push(numss*2);
     }
-    console.log(numsdouble)
+    console.log(numsdouble)*/
     
+      function doublearray(nums){
+        
+        let numsdouble=[];
+        for(let i=0;i<nums.length;i++){
+          const numss=nums[i];
+          numsdouble.push(numss*2);
+        }
+        console.log(numsdouble);
+      }
+      doublearray([11,3,4]);
+      doublearray([2,3,4])
+        
 
 
 
