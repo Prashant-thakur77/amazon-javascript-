@@ -2,33 +2,8 @@
 <html>
   <head>
     <title>Calculator</title>
-    <style>
-      body{
-        background-color: black;
-        color: white;
-        font-size: 35px;
-        font-weight: bold;
-        font-family: Arial;
-      }
-      button{
-        
-        background-color: rgb(42, 41, 41);
-        color: white;
-        height: 60px;
-        width: 60px;
-        border-radius: 30px;
-        margin-right: 12px;
-        font-size: 25px;
-        border: none;
-        cursor: pointer;
-      }
-      .operation-button{
-        background-color: rgb(254, 160, 10);;
-      }
-      .clear-button{
-        font-size: 18px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/calculator.css">
+   
     
 
   </head>
@@ -134,25 +109,9 @@
     >clear</button>
 
 
-    <script>
+    <script src="scripts/calculator.js">
 
-      let calculation = localStorage.getItem('calculation')||'';
-      displaycalculation();
-      function updateCalculation(value){
-        calculation+=value;
-        
-        
-
-        displaycalculation();
-        localStorage.setItem('calculation',calculation);
-        
-
-      }
-      function displaycalculation(){
-        document.querySelector('.js-calculation')
-        .innerHTML=calculation;
-      }
-
+      
 
 
       
