@@ -8,10 +8,14 @@
   <body>
     <p>Todo List Practice 1</p>
     <input placeholder="Todo Name"
-    class="js-input-box">
+    class="js-input-box" onkeydown="
+    if(event.key==='Enter'){
+      addToDo();
+    }">
     <button onclick="
     addToDo();
     ">Add</button>
+    <div class="js-to-list">text</div>
    
 
     <script src="scripts/11-to-do-list.js">
