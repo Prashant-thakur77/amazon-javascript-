@@ -19,6 +19,34 @@ updateScoreElement();
   
 }*/
 
+let isplaying=true;
+let intervalid;
+
+
+
+function autoPlay(){
+
+  if(isplaying){
+     intervalid=setInterval(function(){
+      const playermove=pickComputerMove();
+      playGame(playermove);
+      
+  
+      
+    },1000)
+    isplaying=false;
+
+
+  }
+  else{
+    clearInterval(intervalid);
+    isplaying=true;
+
+  }
+  
+
+}
+
 
 function playGame(playerMove){
   const computerMove = pickComputerMove();
