@@ -6,13 +6,19 @@
 
   </head>
   <body>
+    <button onclick="
+      message+=1;">Add</button>
+    <button onclick="
+    message-=1;
+    ">Remove</button>
   
    
 
     <script>
+      let message=2;
       setInterval(function(){
         if(document.title==='App'){
-          document.title='(2) New messages'
+          document.title=`${message} New messages`
 
         }
         else{
