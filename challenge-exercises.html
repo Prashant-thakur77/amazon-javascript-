@@ -13,21 +13,24 @@
    
 
     <script>
+      
+      let timeoutid;
       function displaymessage(){
-        const element=document.querySelector('.js-message')
+        
+          const element=document.querySelector('.js-message')
         
         
         element.innerHTML='Added!';
-
-
-        setTimeout(function(){
+        clearTimeout(timeoutid);
+         timeoutid =setTimeout(function(){
           element.innerHTML='';
           
 
         },2000)
 
-      }
 
+        }
+        
 
      
       
