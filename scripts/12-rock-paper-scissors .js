@@ -46,6 +46,29 @@ function autoPlay(){
   
 
 }
+const paperElement= document.querySelector('.js-rock-button').addEventListener('click',()=>{
+  playGame('Rock');
+})
+const rockElement= document.querySelector('.js-paper-button').addEventListener('click',()=>{
+  playGame('Paper');
+})
+const scissorElement= document.querySelector('.js-scissors-button').addEventListener('click',()=>{
+  playGame('Scissors');
+})
+
+document.body.addEventListener('keydown',(event)=>{
+  if(event .key==='r'){
+    playGame('Rock')
+
+  }
+  else if(event.key==='p'){
+    playGame('Paper')
+  }
+  else if(event.key==='s'){
+    playGame('Scissors')
+  }
+
+})
 
 
 function playGame(playerMove){
