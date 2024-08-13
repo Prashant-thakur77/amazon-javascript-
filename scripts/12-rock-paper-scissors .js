@@ -131,19 +131,25 @@ function showwarning(){
   `;
   document.querySelector('.js-resetbutton-yes').addEventListener('click',()=>{
     resetscore();
+    hidebutton();
     
-      document.querySelector('.js-warning').innerHTML='';
+      
     
   })
   document.querySelector('.js-resetbutton-no').addEventListener('click',()=>{
     
-    document.querySelector('.js-warning').innerHTML='';
+    hidebutton()
   })
 }
+let timeoutid;
 function hidebutton(){
-  setTimeout(function(){
+  
+  clearTimeout(timeoutid);
+   timeoutid =setTimeout(function(){
     document.querySelector('.js-warning').innerHTML='';
-  },2000);
+    
+
+  },1000)
 }
 
 
