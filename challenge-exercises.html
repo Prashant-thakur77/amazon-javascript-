@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ques</title>
+    
+
+  </head>
+  <body>
+    <button onclick="
+      displaymessage();
+      ">Add to cart</button>
+    <p class="js-message"></p>
+   
+
+    <script>
+      function displaymessage(){
+        const element=document.querySelector('.js-message')
+        
+        
+        element.innerHTML='Added!';
+
+
+        setTimeout(function(){
+          element.innerHTML='';
+          
+
+        },2000)
+
+      }
+
+
+     
+      
+   
+
+
+
+
+
+      
+
+
+    </script>
+
+  
+     
+
+    
+
+  </body>
+</html> 
