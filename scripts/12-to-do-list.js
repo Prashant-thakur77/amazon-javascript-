@@ -8,7 +8,7 @@ rendertodolist();
 function rendertodolist(){
   let todoisHTML ='';
   
-  todoList.forEach(function(todoObject,index){
+  todoList.forEach((todoObject,index)=>{
     
     const {name,duedate}=todoObject;
    
