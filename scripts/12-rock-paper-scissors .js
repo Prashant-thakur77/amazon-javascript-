@@ -6,6 +6,30 @@ let score= JSON.parse(localStorage.getItem('score')) || {
 
 };
 updateScoreElement();
+document.querySelector('.js-resetbutton').addEventListener('click',()=>{
+  showwarning();
+
+
+})
+
+
+function resetscore(){
+  score.wins=0;
+  score.losses=0;
+  score.ties=0;
+
+  
+  
+
+
+localStorage.removeItem('score');
+updateScoreElement();
+
+}
+
+
+
+
 
 
 /*if(!score) {
@@ -22,6 +46,13 @@ updateScoreElement();
 let isplaying=true;
 let intervalid;
 
+document.querySelector('.js-autoplay').addEventListener('click',()=>{
+  autoPlay();
+
+})
+
+
+
 
 
 function autoPlay(){
@@ -35,12 +66,16 @@ function autoPlay(){
       
     },1000)
     isplaying=false;
+    document.querySelector('.js-autoplay').innerHTML='Stop Playing';
+      
 
 
   }
   else{
     clearInterval(intervalid);
     isplaying=true;
+    document.querySelector('.js-autoplay').innerHTML='Auto Play';
+      
 
   }
   
@@ -67,8 +102,49 @@ document.body.addEventListener('keydown',(event)=>{
   else if(event.key==='s'){
     playGame('Scissors')
   }
+  else if(event.key==='a'){
+    autoPlay();
+  }
+  else if(event.key==='Backspace'){
+
+    showwarning();
+  }
+  
+
+ 
+   
+  
+
+
 
 })
+function showwarning(){
+    
+  document.querySelector('.js-warning').innerHTML = `
+  Are you sure you want to reset the score
+  <button class="js-resetbutton-yes">
+  YES
+  </button>
+  <button class="js-resetbutton-no">
+  NO
+  </button>
+  `;
+  document.querySelector('.js-resetbutton-yes').addEventListener('click',()=>{
+    resetscore();
+    
+      document.querySelector('.js-warning').innerHTML='';
+    
+  })
+  document.querySelector('.js-resetbutton-no').addEventListener('click',()=>{
+    
+    document.querySelector('.js-warning').innerHTML='';
+  })
+}
+function hidebutton(){
+  setTimeout(function(){
+    document.querySelector('.js-warning').innerHTML='';
+  },2000);
+}
 
 
 function playGame(playerMove){

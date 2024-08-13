@@ -32,11 +32,34 @@ body{
 .score{
   margin-top: 60px;
 }
-.reset-button,
-.auto-playbutton{
+
+.auto-playbutton,
+.reset-button{
   border: none;
-  padding: 10px 15px 8px 12px;
+  padding: 10px 10px;
+  
   font-size: 15px;
   cursor: pointer;
-  background-color:white;
+  background-attachment: white;
+  
+  color: black;
 }
+.js-resetbutton-yes
+
+{
+  background-color: rgba(255, 0, 0, 0.516);
+  height: 30px;
+  columns: black;
+  width: 50px;
+  
+
+
+}
+.js-resetbutton-no{
+  background-color:rgba(8, 207, 8, 0.619);
+  height: 30px;
+  columns: black;
+  width: 50px;
+
+}
+
