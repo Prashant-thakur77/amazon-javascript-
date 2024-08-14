@@ -30,12 +30,12 @@
     grid-template-columns: repeat(3,1fr);
   }
 }
-@media(max-width:600px){
+@media(max-width:650px){
   .product-grid{
     grid-template-columns: repeat(2,1fr);
   }
 }
-@media(max-width:450px){
+@media(max-width:500px){
   .product-grid{
     grid-template-columns: repeat(1,1fr);
   }
