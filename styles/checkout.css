@@ -1,0 +1,93 @@
+.main{
+  max-width: 1100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 140px;
+  margin-bottom: 140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title{
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.cart-item-grid{
+  display: grid;
+  grid-template-columns: 1fr 350px;
+
+}
+.cart-item-container{
+  border:2px solid rgb(222, 222, 222);
+  margin-bottom: 25px;
+
+}
+.delivery-date{
+  font-weight: 700;
+  color: green;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left:15px;
+}
+.cart-item-details-grid{
+  display: grid;
+  grid-template-columns:100px 1fr 1fr ;
+  margin-left: 20px;
+  margin-top: 25px;
+  column-gap: 30px;
+  margin-bottom: 40px;
+  
+
+}
+.product-image{
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-name,
+.choose-option-title{
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.product-price{
+  color: rgb(161, 4, 4);
+  font-weight: 700;
+  font-size: 18px;
+}
+.product-quantity{
+  margin-top: 12px;
+  
+}
+.update-button{
+  color: rgb(61, 61, 247);
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.delete-button{
+  color: rgb(61, 61, 247);
+
+}
+.choose-a-delivery-option{
+  display: grid;
+  grid-template-columns: 25px 1fr ;
+  
+  
+}
+.delivery-option-date{
+  color: green;
+  font-weight: 700;
+  
+}
+.delivery-option-input{
+  margin-left: 0;
+  cursor: pointer;
+  margin-top: -14px;
+  margin-right: 9px;
+
+}
+.delivery-option-price{
+  color: rgb(120, 120, 120);
+  margin-bottom: 15px;
+}
