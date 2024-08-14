@@ -1,0 +1,200 @@
+.header{
+  display: flex;
+  background-color:rgb(19, 25, 33); 
+  align-items: center;
+  justify-content:space-between;
+  height: 65px;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  
+  
+}
+
+.left-section{
+  width: 180px;
+  flex-shrink: 0;
+
+}
+@media (max-width: 800px) {
+  .left-section {
+    width: unset;
+  }
+}
+
+.header-link{
+  display: inline-block;
+  
+  padding: 10px;
+  margin-left: 20px;
+  border: 1px solid black;
+
+  
+}
+.header-link:hover{
+  border: 1px solid white;
+  border-radius: 8px;
+  
+}
+.amazon-logo{
+  width: 110px;
+
+}
+.amazon-mobile-logo{
+  display: none;
+}
+
+
+
+@media (max-width: 800px) {
+  .amazon-logo{
+    display: none;
+  }
+
+  .amazon-mobile-logo{
+    display: block;
+    height: 35px;
+    margin-top: 5px;
+
+
+  }
+}
+  
+  
+  
+
+
+.mid-section{
+  flex:1;
+  display: flex;
+  max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  
+
+}
+.search-button{
+  flex: 1;
+  height: 42px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border: none;
+ 
+
+}
+.search-logo{
+  height: 22px;
+  background-color: transparent;
+}
+.search-icon-button{
+  
+  background-color:rgb(254, 189, 105); 
+  height: 44px;
+  width: 45px;
+  border: none;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  flex-shrink: 0;
+}
+.search-button::placeholder{
+  padding-left: 18px;
+  font-size: 18px;
+  
+}
+
+.right-section{
+  display: flex;
+  color: white;
+  margin-right:20px;
+  flex-shrink: 0;
+  justify-content: end;
+}
+.cart-box{
+  display: flex;
+}
+.cart-logo{
+  height: 36px;
+  margin-left: 10px;
+}
+.return-text{
+  font-size: 13px;
+}
+.order-text{
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+}
+.cart-text{
+  padding: 0;
+  margin-top: 12px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.ret-order-block{
+  border: 2px solid black;
+  cursor: pointer;
+  padding: 10px 10px 10px 10px;
+  display: block;
+}
+
+.ret-order-block:hover{
+  border: 1px solid white;
+  border-radius: 8px;
+}
+.cart-box{
+  position: relative;
+  
+  border: 2px solid black;
+  cursor: pointer;
+  padding: 10px 10px 10px 10px;
+  
+
+}
+.menu-button{
+  display: none;
+}
+
+@media(max-width:550px){
+  .right-section{
+    display: none;
+  }
+  .menu-button{
+    display:contents;
+    
+    
+  }
+  .hamburger-menu{
+    display: block;
+    margin-left: 30px;
+    margin-right: 15px;
+    height: 25px;
+    
+   
+    align-items: center;
+    cursor: pointer;
+
+
+  }
+  
+  
+  
+
+}
+.cart-box:hover{
+  border: 1px solid white;
+  border-radius: 8px;
+
+}
+.no-of-items-added{
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  left: 45px;
+  color: rgb(240, 136, 4);
+  font-weight: 700;
+
+}
+

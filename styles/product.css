@@ -1,0 +1,128 @@
+.main{
+  margin-top: 60px;
+  
+  
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns:repeat(7,1fr);
+  
+  
+}
+@media(max-width:2000px){
+  .product-grid{
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+@media(max-width:1600px){
+  .product-grid{
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+@media(max-width:1200px){
+  .product-grid{
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+@media(max-width:850px){
+  .product-grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+@media(max-width:600px){
+  .product-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media(max-width:450px){
+  .product-grid{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+.product-container{
+  padding: 38px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  
+  margin-right: 30px;
+  border-right: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(231, 231, 231);
+
+
+}
+.product-image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 180px;
+
+  
+  
+  
+}
+.image-product{
+  max-width: 100%;
+  max-height: 100%;
+}
+.product-name{
+  height: 40px;
+  margin-bottom: 5px;
+}
+.product-rating-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.rating-star{
+  width: 80px;
+  margin-right: 5px;
+  
+  
+}
+
+.count-review{
+  cursor: pointer;
+  margin-top: 3px;
+  color: rgb(1, 124, 182);
+}
+.product-price{
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-quantity-container{
+  margin-bottom: 10px;
+  
+
+}
+.product-spacer{
+  flex: 1;
+}
+
+.added-to-cart{
+  color: rgb(6, 125, 98);
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  opacity: 1;
+}
+
+.added-to-cart-img{
+  height:20px;
+  margin-right: 5px;
+  
+}
+.add-to-cart-button{
+  width: 100%;
+  background-color: rgb(255, 216, 20);
+  border: 1px solid rgb(252, 210, 0);
+  border-radius: 30px;
+  padding: 10px 10px;
+}
+.add-to-cart-button:hover{
+  background-color: rgba(240, 200, 2, 0.856);
+}
