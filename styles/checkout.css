@@ -18,10 +18,15 @@
   grid-template-columns: 1fr 350px;
 
 }
-.cart-item-container{
+.cart-item-container,
+.payment-detail{
   border:2px solid rgb(222, 222, 222);
   margin-bottom: 25px;
 
+}
+.payment-detail{
+  margin-left: 15px;
+  height: 360px;
 }
 .delivery-date{
   font-weight: 700;
@@ -91,3 +96,56 @@
   color: rgb(120, 120, 120);
   margin-bottom: 15px;
 }
+.payment-detail-title{
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px;
+  
+}
+.payment-summary-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  font-size: 15px;
+  margin-bottom: 9px;
+
+}
+
+.payment-detail{
+  padding: 20px;
+}
+.payment-summary-money{
+  align-items: right;
+}
+.subtotal-row div
+{
+  padding-top: 9px;
+}
+.before-tax-price{
+  border-top: 2px solid rgb(222, 222, 222);
+  
+  
+ 
+}
+.order-total-row{
+  padding-top: 18px;
+  border-top: 2px solid rgb(222, 222, 222);
+  font-size: 19px;
+  color:rgba(186, 7, 7, 0.908);
+  font-weight: 700;
+
+}
+
+.place-order-button{
+  background-color: rgb(255, 216, 20);
+  border: none;
+  width: 100%;
+  padding-top: 14px ;
+  padding-bottom: 14px;
+  margin-top: 40px;
+  border-radius: 8px;
+  
+
+}
+
+
+
