@@ -1,0 +1,165 @@
+.main{
+  margin-top: 70px;
+}
+.order-segment{
+  max-width: 850px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+  padding-left: 20px;
+  
+  padding-right: 20px;
+
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+.order-page-title{
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 23px;
+}
+
+.headings{
+  background-color: rgb(240, 242, 242);
+  border: 1px solid rgb(213, 217, 217);
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.heading-row-1{
+  font-weight: bold;
+  display:grid;
+  grid-template-columns:170px 1fr 1fr ;
+}
+.heading-row-2{
+  display:grid;
+  grid-template-columns:170px 1fr 1fr ;
+  color: rgb(33, 33, 33);;
+}
+
+@media(max-width:700px){
+  .headings{
+    display: flex;
+    font-size: 15px;
+    
+
+    
+  }
+  .heading-row-1{
+    display: flex;
+    margin-right: 10px;
+    flex-direction: column;
+  }
+  .heading-row-2{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+  }
+
+}
+
+.order-detail-container{
+  border: 1px solid rgb(213, 217, 217);
+  padding-bottom: 40px;
+}
+.order-details{
+  display:grid;
+  grid-template-columns:140px 1fr 220px ;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+}
+
+@media(max-width:800px){
+  .order-details{
+    display:grid;
+    grid-template-columns:140px 1fr  ;
+    margin-bottom: 0px;
+    padding-top: 40px;
+    padding-left: 40px;
+    
+  
+  }
+  .buy-button{
+    margin-bottom: 2px;
+  }
+  .track-package-button{
+    padding: 7px;
+    padding-left: 50px;
+    padding-right: 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    justify-content: center;
+    
+    
+  }
+  .track-package{
+    
+    grid-column: 2;
+    width: 150px;
+    
+    
+    
+    
+    
+  }
+  
+}
+    
+    
+
+
+  
+
+
+
+.image{
+  width: 100px;
+  
+  
+  
+}
+.order-name{
+  font-size: 16px;
+  font-weight: bold;
+}
+.order-detail-rows{
+  margin-bottom: 6px;
+}
+.buy-again-image{
+  position: absolute;
+  height: 25px;
+  margin-left: 12px;
+  margin-top: 5px;
+}
+.buy-button{
+  padding: 7px;
+  padding-left: 50px;
+  padding-right: 20px;
+  background-color: rgb(255, 216, 20);
+  border: 1px solid rgb(252, 210, 0);
+  border-radius: 5px;
+  font-size: 15px;
+}
+.track-package{
+  
+ 
+  align-self: start;
+  
+  
+  
+
+}
+.track-package-button{
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  
+  border: 1px solid rgb(213, 217, 217) ;
+  border-radius: 8px;
+  font-size: 15px;
+  box-shadow: 0 3px 5px rgba(213, 217, 217, 0.5) ;
+}
