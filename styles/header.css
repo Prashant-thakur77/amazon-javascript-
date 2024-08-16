@@ -127,6 +127,8 @@
 }
 .cart-box{
   display: flex;
+  color: white;
+  text-decoration: none;
 }
 .cart-logo{
   height: 36px;
@@ -152,6 +154,8 @@
   cursor: pointer;
   padding: 10px 10px 10px 10px;
   display: block;
+  color:white;
+  text-decoration: none;
 }
 
 .ret-order-block:hover{
