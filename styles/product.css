@@ -128,3 +128,6 @@
 .add-to-cart-button:hover{
   background-color: rgba(240, 200, 2, 0.856);
 }
+.added-to-cart-visible{
+  opacity: 1;
+}

@@ -1,5 +1,5 @@
 
-
+import{cart} from '../data/cart.js';
 let productsHTML='';
 
 
@@ -51,7 +51,7 @@ products.forEach((products)=>{
 
           
           <div class="product-spacer"></div>
-          <div class="added-to-cart js-added-to-cart">
+          <div class="added-to-cart js-added-to-cart-${products.id}">
             <img class="added-to-cart-img" src="images/checkmark.png">
             Added
           </div>
@@ -69,6 +69,8 @@ products.forEach((products)=>{
 
 document.querySelector('.js-product-grid').
 innerHTML = productsHTML;
+
+
 
 
 
@@ -104,7 +106,19 @@ document.querySelectorAll('.js-add-to-cart')
       cart.forEach((item)=>{
         totalQuantity+=item.quantity;
       });
+
+      
+      
       document.querySelector('.js-quantity-no').innerHTML=totalQuantity;
+
+      const addMessage = document.querySelector(`.js-added-to-cart-${productsId}`
+
+      );
+      addMessage.classList.add('added-to-cart-visible');
+      
+
+
+
 
       
       
