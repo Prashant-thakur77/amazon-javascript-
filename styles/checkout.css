@@ -93,11 +93,14 @@
   color: rgb(61, 61, 247);
   margin-left: 4px;
   margin-right: 4px;
+  cursor: pointer;
 }
 .delete-button{
   color: rgb(61, 61, 247);
+  cursor: pointer;
 
 }
+
 
 
 .choose-a-delivery-option{
