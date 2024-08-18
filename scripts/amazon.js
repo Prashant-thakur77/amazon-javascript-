@@ -1,10 +1,10 @@
 import{products} from '../data/products.js'
 
-import{addToCart} from '../data/cart.js';
-let productsHTML='';
+import{cart,addToCart} from '../data/cart.js';
+
 import { formatCurrency } from './utils/money.js';
 
-
+let productsHTML='';
 products.forEach((products)=>{
   productsHTML += `
         <div class="product-container">
@@ -86,7 +86,7 @@ function updateCartQuantity(){
   
   document.querySelector('.js-quantity-no').innerHTML=totalQuantity;
 
-  const addMessage = document.querySelector(`.js-added-to-cart-${productsId}`
+  const addMessage = document.querySelector(`.js-added-to-cart-${productId}`
 
   );
 
