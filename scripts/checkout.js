@@ -1,6 +1,7 @@
 import{cart,
   removeFromCart,
-  addToCart
+  addToCart,
+  updateDeliveryOptions
 } from '../data/cart.js';
 import{products} from '../data/products.js';
 import {formatCurrency } from './utils/money.js';
@@ -106,7 +107,8 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
     const isChecked = deliveryOption.id===cartItem.deliveryOptionId;
 
     html+=
-    `<div class="choose-a-delivery-option">
+    `<div class="choose-a-delivery-option js-delivery-option"
+    data-product-id="${matchingProduct.id}" data-delivery-option-id="${deliveryOption.id}">
         <input type="radio" ${isChecked?'checked':''} class="delivery-option-input" name="delivery-option-${matchingProduct.id}">
 
         <div>
@@ -158,18 +160,25 @@ document.querySelectorAll('.js-delete-link')
     
     });
   });  
-  document.querySelectorAll('.js-save-link')
-    .forEach((link)=>{
-      link.addEventListener('click',()=>{
-        const productId=link.dataset.productId;
-        const container=document.querySelector(`.js-cart-item-container-${productId}`
+document.querySelectorAll('.js-save-link')
+  .forEach((link)=>{
+    link.addEventListener('click',()=>{
+      const productId=link.dataset.productId;
+      const container=document.querySelector(`.js-cart-item-container-${productId}`
 
-        );
-        container.classList.remove('is-editing-quantity');
-        
+      );
+      container.classList.remove('is-editing-quantity');
+      
 
-      });
     });
+  });
 
+document.querySelectorAll('.js-delivery-option')
+  .forEach((Element)=>{
+    Element.addEventListener('click',()=>{
+      const{deliveryOptionId,productId}=Element.dataset;
+      updateDeliveryOptions(deliveryOptionId,productId)
+    })
+  })
 
 
