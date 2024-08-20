@@ -7,7 +7,7 @@ import{products,getProduct} from '../../data/products.js';
 import {formatCurrency } from '../utils/money.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import{deliveryOptions, getdeliveryOption}from '../../data/delivery-option.js'
-import { renderPaymentSummary } from './paymentSummary.js';
+import {renderPaymentSummary} from './paymentSummary.js';
 
 
 export function renderOrderSummary(){
@@ -125,6 +125,7 @@ export function renderOrderSummary(){
     return html;
 
   }
+  
   document.querySelector('.js-order-summary').innerHTML=cartSummaryHTML;
 
   document.querySelectorAll('.js-delete-link')
@@ -174,6 +175,7 @@ export function renderOrderSummary(){
         const{deliveryOptionId,productId}=Element.dataset;
         updateDeliveryOptions(deliveryOptionId,productId);
         renderOrderSummary();
+        renderPaymentSummary();
       })
     })
 }
