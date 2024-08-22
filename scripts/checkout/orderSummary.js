@@ -35,7 +35,7 @@ export function renderOrderSummary(){
 
 
     cartSummaryHTML +=
-    `<div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
+    `<div class="cart-item-container js-cart-item-container js-cart-item-container-${matchingProduct.id}">
         <div class="delivery-date">
           Delivery date: ${dateString}
         </div>
@@ -87,6 +87,7 @@ export function renderOrderSummary(){
   });
 
 
+
   function deliveryOptionsHTML(matchingProduct,cartItem){
 
     let html='';
@@ -125,8 +126,10 @@ export function renderOrderSummary(){
     return html;
 
   }
-  
+
   document.querySelector('.js-order-summary').innerHTML=cartSummaryHTML;
+  
+ 
 
   document.querySelectorAll('.js-delete-link')
     .forEach((link)=> {
@@ -176,8 +179,8 @@ export function renderOrderSummary(){
         updateDeliveryOptions(deliveryOptionId,productId);
         renderOrderSummary();
         renderPaymentSummary();
-      })
-    })
+      });
+    });
 }
 renderOrderSummary();
 
