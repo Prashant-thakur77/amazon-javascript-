@@ -127,7 +127,14 @@ export function renderOrderSummary(){
 
   }
 
-  document.querySelector('.js-order-summary').innerHTML=cartSummaryHTML;
+  
+  const orderSummaryElement = document.querySelector('.js-order-summary');
+  if (orderSummaryElement) {
+    orderSummaryElement.innerHTML = cartSummaryHTML;
+  } else {
+    console.error("Element '.js-order-summary' not found.");
+  }
+
   
  
 

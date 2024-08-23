@@ -65,8 +65,14 @@ export function renderPaymentSummary(){
       Place your order
     </button>  `;
 
-    document.querySelector('.js-payment-summary')
-      .innerHTML=html;
+    
+    const paymentSummaryElement = document.querySelector('.js-payment-summary');
+    if (paymentSummaryElement) {
+      paymentSummaryElement.innerHTML = html;
+    } else {
+      console.error("Element '.js-payment-summary' not found.");
+    }
+
       
   
 
