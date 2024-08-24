@@ -113,11 +113,14 @@ export function loadProductsFetch(){
     
   
 
+  }).catch(()=>{
+    console.log('unexpected error.Please try agin later')
   });
   return promise;
 
 
 }
+
 
 /*
 loadProductsFetch().then(()=>{
@@ -147,9 +150,13 @@ export function loadProducts(func){
 
 
   });
+  xhr.addEventListener('error',()=>{
+    console.log('unexpected error.Please try agin later')
+  })
   xhr.open('GET','https://supersimplebackend.dev/products');
   xhr.send();
 }
+
 
 
 
