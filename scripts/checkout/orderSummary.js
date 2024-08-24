@@ -9,7 +9,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import{deliveryOptions, getdeliveryOption}from '../../data/delivery-option.js'
 import {renderPaymentSummary} from './paymentSummary.js';
 
-loadProducts(renderOrderSummary);
+
 
 
 export function renderOrderSummary(){
@@ -27,9 +27,8 @@ export function renderOrderSummary(){
    
 
     const matchingProduct=getProduct(productId);
-    
-    
-    const deliveryOptionId = cartItem.deliveryOptionId;
+    if(matchingProduct!==undefined){
+      const deliveryOptionId = cartItem.deliveryOptionId;
     const deliveryOption =getdeliveryOption(deliveryOptionId);
     const today=dayjs();
     const deliveryDate = today.add(deliveryOption.deliveryDay,'days');
@@ -90,6 +89,12 @@ export function renderOrderSummary(){
         </div>
       </div>
       `;
+
+
+    }
+    
+    
+    
 
   });
 
